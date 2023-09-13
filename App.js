@@ -1,7 +1,5 @@
-import { Home } from "./src/screens"
+import { Home, Products } from "./src/screens"
 
 export default function App() {
-  return <Home />
+  return <Products category={'smartphones'}/>
 }
-
-// 1:23:27

@@ -1,4 +1,4 @@
-import { Pressable, Text } from 'react-native'
+import { Pressable, Text, } from 'react-native'
 
 import {Card} from '../../../../components'
 import React from 'react'

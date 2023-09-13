@@ -2,17 +2,17 @@ import { Pressable, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
 
 import AntDesign from '@expo/vector-icons/AntDesign'
-import styles from './Searchinput.style'
+import styles from './SearchInput.style'
 
-const Searchinput = ({ onSearch }) => {
-    const [value, setvaleu] = useState('')
+const SearchInput = ({ onSearch }) => {
+    const [value, setValue] = useState('')
 
     const search = () => {
         onSearch(value)
     }
 
     const clearInput = () => {
-        setvaleu('');
+        setValue('');
         onSearch('')
     }
 
@@ -34,6 +34,4 @@ const Searchinput = ({ onSearch }) => {
   )
 }
 
-export default Searchinput
-
-const styles = StyleSheet.create({})
+export default SearchInput
