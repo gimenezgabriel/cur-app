@@ -10,12 +10,12 @@ export default styles = StyleSheet.create({
         paddingTop: 10,
     },
     input: {
-        color:'white',
-        backgroundColor: colors.primary,
+        color: colors.primary,
+        backgroundColor: '#ffffff',
         borderRadius: 8,
         padding: 10,
-        borderWidth: 1,
-        borderColor: colors.primary,
+        borderWidth: 2,
+        borderColor: colors.secondary,
         width: '80%',
         fontSize: 20,
     }

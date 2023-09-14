@@ -12,6 +12,7 @@ export default styles = StyleSheet.create({
     },
     text: {
         fontSize: 25,
+        fontFamily: 'OpenSansBold',
         color: '#ffffff',
     },
 })

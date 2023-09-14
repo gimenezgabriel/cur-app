@@ -8,4 +8,7 @@ export default styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         },
+        text: {
+            fontFamily: 'OpenSansBold',
+        }
     })
