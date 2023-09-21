@@ -3,10 +3,10 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Header from '../components/Header'
 
-const CategoriesList = ({category}) => {
+const CategoriesList = ({category, navigation}) => {
   return (
 <>
-    <Header title={category}/>
+    <Header title={category} navigation={navigation}/>
     <View style={styles.container}>
         <Text>Categories List</Text>
     </View>

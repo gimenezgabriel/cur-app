@@ -5,9 +5,10 @@ import { Header, SearchInput } from "../../components";
 import styles from "./products.style";
 import allProducts from "../../data/products";
 
-const Products = ({ category, navigation }) => {
+const Products = ({ navigation, route }) => {
   const [arrProducts, setArrProducts] = useState([]);
   const [keyword, setKeyword] = useState("");
+  const {category} = route.params
 
   useEffect(() => {
     if (category) {
@@ -34,7 +35,7 @@ const Products = ({ category, navigation }) => {
         <FlatList
           data={arrProducts}
           renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => navigation.navigate('Details')}>
+            <TouchableOpacity onPress={() => navigation.navigate('Details', {product: item})}>
               <Text>{item.title}</Text>
             </TouchableOpacity>
           )}

@@ -10,7 +10,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 const Home = ({ navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
-    <Header title={'Categories'} />
+    <Header title={'Categorias'} navigation={navigation} />
     <FlatList
     data={dataCategories}
     keyExtractor={category => category}

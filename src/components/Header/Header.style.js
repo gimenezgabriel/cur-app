@@ -8,7 +8,15 @@ export default styles = StyleSheet.create({
         height: 60,
         width: '100%',
         justifyContent: 'center',
+
         alignItems: 'center',
+        flexDirection: 'row',
+    },
+    headerContainer: {
+        flexDirection: 'row', 
+        alignItems: 'center', 
+        justifyContent: 'space-between',
+
     },
     text: {
         fontSize: 25,
