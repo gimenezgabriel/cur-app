@@ -5,10 +5,11 @@ import { CategoryItem } from './Components'
 import React from 'react'
 import dataCategories from '../../data/dataCategories'
 import styles from './Home.style'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
-const Home = ({setCategorySelected}) => {
+const Home = ({ navigation}) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
     <Header title={'Categories'} />
     <FlatList
     data={dataCategories}
@@ -16,11 +17,11 @@ const Home = ({setCategorySelected}) => {
     renderItem={({ item }) => (
     <CategoryItem
      category={item}
-     setCategorySelected={setCategorySelected}
+     navigation={navigation}
      />
      )}
     />
-    </View>
+    </SafeAreaView>
   )
 }
 
