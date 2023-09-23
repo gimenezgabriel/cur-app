@@ -4,7 +4,8 @@ import React from 'react'
 import Header from '../components/Header'
 
 const CategoriesList = ({category, navigation}) => {
-  return (
+
+return (
 <>
     <Header title={category} navigation={navigation}/>
     <View style={styles.container}>

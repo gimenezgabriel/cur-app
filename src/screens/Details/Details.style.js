@@ -12,6 +12,7 @@ export default styles = StyleSheet.create({
   },
   image: {
     height: '100%',
+    width: '100%',
   },
   title: {
     fontSize: 30,

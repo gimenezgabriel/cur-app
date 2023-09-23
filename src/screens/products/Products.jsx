@@ -4,16 +4,17 @@ import React, { useEffect, useState } from "react";
 import { Header, SearchInput } from "../../components";
 import styles from "./products.style";
 import allProducts from "../../data/products";
+import ProductItem from "./ProductItem/ProductItem";
 
 const Products = ({ navigation, route }) => {
   const [arrProducts, setArrProducts] = useState([]);
   const [keyword, setKeyword] = useState("");
-  const {category} = route.params
+  const {title} = route.params
 
   useEffect(() => {
-    if (category) {
-      const products = allProducts.filter(
-        (product) => product.category === category
+    if (title) {
+      const products = allProducts.filter(   
+        (product) => product.category === title
       );
       const productsFiltered = products.filter((product) =>
         product.title.includes(keyword)
@@ -25,14 +26,15 @@ const Products = ({ navigation, route }) => {
       );
       setArrProducts(productsFiltered);
     }
-  }, [category, keyword]);
+  }, [title, keyword]);
+
 
   return (
     <View style={styles.container}>
-      <Header title={category} />
+      <Header title={title} navigation={navigation}/>
       <SearchInput onSearch={setKeyword} />
       <View style={styles.listContainer}>
-        <FlatList
+        {/* <FlatList
           data={arrProducts}
           renderItem={({ item }) => (
             <TouchableOpacity onPress={() => navigation.navigate('Details', {product: item})}>
@@ -40,7 +42,17 @@ const Products = ({ navigation, route }) => {
             </TouchableOpacity>
           )}
           keyExtractor={(item) => item.id}
-        />
+        /> */}
+        <FlatList
+    data={arrProducts}
+    renderItem={({ item }) => (
+      <ProductItem
+      product={item}
+      navigation={navigation}
+      />
+      )}
+      keyExtractor={(item) => item.id}
+    />
       </View>
     </View>
   );

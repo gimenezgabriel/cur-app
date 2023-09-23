@@ -11,7 +11,7 @@ function StackNavigator() {
     return (
         <NavigationContainer>
             <Stack.Navigator initialRouteName='Home' 
-            screenOptions={({route, navigation}) => ({
+            screenOptions={() => ({
                 headerShown: false,
                 // header: () => (
                 //     <View style={{flexDirection: 'row', marginTop: 50}}>

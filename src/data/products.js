@@ -1,257 +1,166 @@
+import Doctor1 from '../../assets/images/ricardorasguido.jpg'
+import Doctor2 from '../../assets/images/lucasrasguido.jpg'
+import Doctor3 from '../../assets/images/alejorasguido.jpg'
+import Doctor4 from '../../assets/images/lescanomartin.jpg'
+import Doctor5 from '../../assets/images/carlossanagua.jpg'
+import Doctor6 from '../../assets/images/juanmanueldiaz.jpg'
+import Doctor7 from '../../assets/images/cossiojuanmanuel.jpg'
+import Doctor8 from '../../assets/images/mohedanomaria.jpg'
+import Doctor9 from '../../assets/images/diazjuanmanuel.jpg'
+
 export default [
-{
+  {
     "id": 1,
     "title": "Dr. Ricardo Rasguido",
-    "description": "An apple mobile which is nothing like apple",
+    "description": "El Dr. Ricardo Rasguido es un destacado profesional en el campo de la Urología. Con más de dos décadas de experiencia en el tratamiento de trastornos urológicos, ha realizado numerosas cirugías exitosas y ha contribuido significativamente a la investigación en esta área.",
     "price": 549,
     "discountPercentage": 12.96,
     "rating": 4.69,
-    "stock": 94,
-    "brand": "Apple",
     "category": "Urologia",
-    "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-    "images": [
-      "https://i.dummyjson.com/data/products/1/1.jpg",
-      "https://i.dummyjson.com/data/products/1/2.jpg",
-      "https://i.dummyjson.com/data/products/1/3.jpg",
-      "https://i.dummyjson.com/data/products/1/4.jpg",
-      "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-    ]
+    "images": [Doctor1],
+    "cardnumber": 123456
   },
   {
     "id": 2,
     "title": "Dr. Lucas Rasguido",
-    "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+    "description": "El Dr. Lucas Rasguido es un experto en Urología con una vasta experiencia en el tratamiento de trastornos urológicos. Ha liderado investigaciones pioneras y su dedicación a la excelencia médica es insuperable.",
     "price": 899,
     "discountPercentage": 17.94,
     "rating": 4.44,
-    "stock": 34,
-    "brand": "Apple",
     "category": "Urologia",
-    "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
-    "images": [
-      "https://i.dummyjson.com/data/products/2/1.jpg",
-      "https://i.dummyjson.com/data/products/2/2.jpg",
-      "https://i.dummyjson.com/data/products/2/3.jpg",
-      "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
-    ]
+    "images": [Doctor2],
+    "cardnumber": 234567
   },
   {
     "id": 3,
     "title": "Dr. Alejo Rasguido",
-    "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+    "description": "El Dr. Alejo Rasguido es un renombrado especialista en Urología con un historial de éxitos en el tratamiento de pacientes. Su compromiso con la mejora continua lo ha convertido en un referente en su campo.",
     "price": 1249,
     "discountPercentage": 15.46,
     "rating": 4.09,
-    "stock": 36,
-    "brand": "Samsung",
     "category": "Urologia",
-    "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
-    "images": [
-      "https://i.dummyjson.com/data/products/3/1.jpg"
-    ]
+    "images": [Doctor3],
+    "cardnumber": 345678
   },
   {
     "id": 4,
     "title": "Dr. Martin Lescano",
-    "description": "OPPO F19 is officially announced on April 2021.",
+    "description": "El Dr. Martin Lescano es un experto en cirugía urológica, con un historial destacado en el tratamiento de trastornos del sistema urinario. Ha demostrado su compromiso con la salud y el bienestar de sus pacientes.",
     "price": 280,
     "discountPercentage": 17.91,
     "rating": 4.3,
-    "stock": 123,
-    "brand": "OPPO",
     "category": "Urologia",
-    "thumbnail": "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
-    "images": [
-      "https://i.dummyjson.com/data/products/4/1.jpg",
-      "https://i.dummyjson.com/data/products/4/2.jpg",
-      "https://i.dummyjson.com/data/products/4/3.jpg",
-      "https://i.dummyjson.com/data/products/4/4.jpg",
-      "https://i.dummyjson.com/data/products/4/thumbnail.jpg"
-    ]
+    "images": [Doctor4],
+    "cardnumber": 456789
   },
   {
     "id": 5,
     "title": "Dr. Carlos Sanagua",
-    "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+    "description": "El Dr. Carlos Sanagua es un reconocido profesional en el campo de la Urología. Su dedicación a la investigación y su compromiso con la excelencia médica lo han convertido en un líder en su especialidad.",
     "price": 499,
     "discountPercentage": 10.58,
     "rating": 4.09,
-    "stock": 32,
-    "brand": "Huawei",
     "category": "Urologia",
-    "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
-    "images": [
-      "https://i.dummyjson.com/data/products/5/1.jpg",
-      "https://i.dummyjson.com/data/products/5/2.jpg",
-      "https://i.dummyjson.com/data/products/5/3.jpg"
-    ]
+    "images": [Doctor5],
+    "cardnumber": 567890
   },
   {
     "id": 6,
     "title": "Dr. Ricardo Rasguido",
-    "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+    "description": "El Dr. Ricardo Rasguido es un destacado profesional en el campo de la Andrología. Ha estado a la vanguardia de los avances en medicina andrológica y ha contribuido significativamente a la investigación en esta área.",
     "price": 1749,
     "discountPercentage": 11.02,
     "rating": 4.57,
-    "stock": 83,
-    "brand": "Apple",
     "category": "Andrologia",
-    "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.png",
-    "images": [
-      "https://i.dummyjson.com/data/products/6/1.png",
-      "https://i.dummyjson.com/data/products/6/2.jpg",
-      "https://i.dummyjson.com/data/products/6/3.png",
-      "https://i.dummyjson.com/data/products/6/4.jpg"
-    ]
+    "images": [Doctor1],
+    "cardnumber": 678901
   },
   {
     "id": 7,
     "title": "Dr. Lucas Rasguido",
-    "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
+    "description": "El Dr. Lucas Rasguido es un experto en Andrología con una destacada trayectoria en el campo. Sus contribuciones a la medicina andrológica son altamente valoradas y ha brindado soluciones innovadoras a sus pacientes.",
     "price": 1499,
     "discountPercentage": 4.15,
     "rating": 4.25,
-    "stock": 50,
-    "brand": "Samsung",
     "category": "Andrologia",
-    "thumbnail": "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
-    "images": [
-      "https://i.dummyjson.com/data/products/7/1.jpg",
-      "https://i.dummyjson.com/data/products/7/2.jpg",
-      "https://i.dummyjson.com/data/products/7/3.jpg",
-      "https://i.dummyjson.com/data/products/7/thumbnail.jpg"
-    ]
+    "images": [Doctor2],
+    "cardnumber": 789012
   },
   {
     "id": 8,
     "title": "Dr. Alejo Rasguido",
-    "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+    "description": "El Dr. Alejo Rasguido es un experto en Andrología conocido por su estilo y velocidad en la práctica médica. Es un líder en videollamadas en HD respaldado por Studio Mics y fomenta la captura de ideas en pantallas táctiles.",
     "price": 1499,
     "discountPercentage": 10.23,
     "rating": 4.43,
-    "stock": 68,
-    "brand": "Microsoft Surface",
     "category": "Andrologia",
-    "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-    "images": [
-      "https://i.dummyjson.com/data/products/8/1.jpg",
-      "https://i.dummyjson.com/data/products/8/2.jpg",
-      "https://i.dummyjson.com/data/products/8/3.jpg",
-      "https://i.dummyjson.com/data/products/8/4.jpg",
-      "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-    ]
+    "images": [Doctor3],
+    "cardnumber": 890123
   },
   {
     "id": 9,
     "title": "Dr. Martin Lescano",
-    "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
+    "description": "El Dr. Martin Lescano es un experto en Andrología y ofrece el Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey con 1 año de garantía. Su compromiso con la salud de sus pacientes es innegable.",
     "price": 1099,
     "discountPercentage": 11.83,
     "rating": 4.54,
-    "stock": 96,
-    "brand": "Infinix",
     "category": "Andrologia",
-    "thumbnail": "https://i.dummyjson.com/data/products/9/thumbnail.jpg",
-    "images": [
-      "https://i.dummyjson.com/data/products/9/1.jpg",
-      "https://i.dummyjson.com/data/products/9/2.png",
-      "https://i.dummyjson.com/data/products/9/3.png",
-      "https://i.dummyjson.com/data/products/9/4.jpg",
-      "https://i.dummyjson.com/data/products/9/thumbnail.jpg"
-    ]
+    "images": [Doctor4],
+    "cardnumber": 901234
   },
   {
     "id": 10,
     "title": "Dr. Carlos Sanagua",
-    "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+    "description": "El Dr. Carlos Sanagua presenta la laptop para juegos HP Pavilion 15-DK1056WM de 10.a generación Core i5, 8GB, SSD de 256GB, GTX 1650 4GB, Windows 10. Combina su experiencia en Urología con la tecnología de vanguardia.",
     "price": 1099,
     "discountPercentage": 6.18,
     "rating": 4.43,
-    "stock": 89,
-    "brand": "HP Pavilion",
     "category": "Andrologia",
-    "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
-    "images": [
-      "https://i.dummyjson.com/data/products/10/1.jpg",
-      "https://i.dummyjson.com/data/products/10/2.jpg",
-      "https://i.dummyjson.com/data/products/10/3.jpg",
-      "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
-    ]
+    "images": [Doctor5],
+    "cardnumber": 123456
   },
   {
     "id": 11,
     "title": "Dr. Juan Manuel Diaz",
-    "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
+    "description": "El Dr. Juan Manuel Diaz es un cardiólogo con una amplia experiencia en el diagnóstico y tratamiento de enfermedades del corazón. Su dedicación a la salud cardiovascular es insuperable.",
     "price": 13,
     "discountPercentage": 8.4,
     "rating": 4.26,
-    "stock": 65,
-    "brand": "Impression of Acqua Di Gio",
     "category": "Cardiologia",
-    "thumbnail": "https://i.dummyjson.com/data/products/11/thumbnail.jpg",
-    "images": [
-      "https://i.dummyjson.com/data/products/11/1.jpg",
-      "https://i.dummyjson.com/data/products/11/2.jpg",
-      "https://i.dummyjson.com/data/products/11/3.jpg",
-      "https://i.dummyjson.com/data/products/11/thumbnail.jpg"
-    ]
+    "images": [Doctor6],
+    "cardnumber": 234567
   },
   {
     "id": 12,
-    "title": "Dr. Juan Manuel cossio",
-    "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
+    "title": "Dr. Juan Manuel Cossio",
+    "description": "El Dr. Juan Manuel Cossio presenta el perfume Royal Mirage Sport Brown para hombres y mujeres. Con 120 ml de fragancia, es una elección sofisticada para aquellos que buscan un aroma exclusivo.",
     "price": 40,
     "discountPercentage": 15.66,
     "rating": 4,
-    "stock": 52,
-    "brand": "Royal_Mirage",
     "category": "Nefrologia",
-    "thumbnail": "https://i.dummyjson.com/data/products/12/thumbnail.jpg",
-    "images": [
-      "https://i.dummyjson.com/data/products/12/1.jpg",
-      "https://i.dummyjson.com/data/products/12/2.jpg",
-      "https://i.dummyjson.com/data/products/12/3.png",
-      "https://i.dummyjson.com/data/products/12/4.jpg",
-      "https://i.dummyjson.com/data/products/12/thumbnail.jpg"
-    ]
+    "images": [Doctor7],
+    "cardnumber": 345678
   },
   {
     "id": 13,
     "title": "Dr. Maria Mohedano",
-    "description": "Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men",
+    "description": "La Dra. Maria Mohedano le presenta el mejor perfume Fog Scent Xpressio de 100 ml para hombres. Estas fragancias frescas y duraderas son ideales para hombres que buscan un aroma distintivo.",
     "price": 13,
     "discountPercentage": 8.14,
     "rating": 4.59,
-    "stock": 61,
-    "brand": "Fog Scent Xpressio",
     "category": "Ginecologia",
-    "thumbnail": "https://i.dummyjson.com/data/products/13/thumbnail.webp",
-    "images": [
-      "https://i.dummyjson.com/data/products/13/1.jpg",
-      "https://i.dummyjson.com/data/products/13/2.png",
-      "https://i.dummyjson.com/data/products/13/3.jpg",
-      "https://i.dummyjson.com/data/products/13/4.jpg",
-      "https://i.dummyjson.com/data/products/13/thumbnail.webp"
-    ]
+    "images": [Doctor8],
+    "cardnumber": 456789
   },
   {
     "id": 14,
     "title": "Dr. Sebastian Benegas",
-    "description": "Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil",
+    "description": "El Dr. Sebastian Benegas presenta Al Munakh® original de Mahal Al Musk. Nuestra impresión de Climate en 6 ml de perfume concentrado sin alcohol. Una elección elegante y duradera.",
     "price": 120,
     "discountPercentage": 15.6,
     "rating": 4.21,
-    "stock": 114,
-    "brand": "Al Munakh",
     "category": "Cirugia General",
-    "thumbnail": "https://i.dummyjson.com/data/products/14/thumbnail.jpg",
-    "images": [
-      "https://i.dummyjson.com/data/products/14/1.jpg",
-      "https://i.dummyjson.com/data/products/14/2.jpg",
-      "https://i.dummyjson.com/data/products/14/3.jpg",
-      "https://i.dummyjson.com/data/products/14/thumbnail.jpg"
-    ]
-  },
-  
-]
+    "images": [Doctor9],
+    "cardnumber": 567890
+  }
+];

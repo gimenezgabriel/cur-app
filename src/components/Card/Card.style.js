@@ -3,7 +3,7 @@ import { colors } from "../../constants/Colors";
 
 export default styles = StyleSheet.create({
     container:{
-        backgroundColor: colors.secondary ,
+        backgroundColor: '#ffffff' ,
         borderRadius: 8,
         shadowColor: '#06292e',
         shadowOffset: {height: 5, width: 3},
