@@ -16,16 +16,19 @@ export default styles = StyleSheet.create({
   },
   title: {
     fontSize: 30,
-    fontWeight: 'bold',
+    fontFamily: 'OpenSansBold',
     marginHorizontal:5,
+    color: colors.quaternary,
   },
   description: {
     marginHorizontal:5,
+    fontFamily: 'OpenSansMedium'
   },
   price: {
     fontSize: 20,
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     marginVertical: 15,
     marginHorizontal:5,
+    fontFamily: 'OpenSansCondensedBold'
   },
 })

@@ -8,7 +8,6 @@ export default styles = StyleSheet.create({
         alignItems: 'center',
         width: '90%',
         paddingTop: 10,
-        marginHorizontal: 20,
     },
     input: {
         color: colors.primary,
