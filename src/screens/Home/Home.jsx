@@ -13,7 +13,7 @@ const Home = ( {navigation, route}) => {
     <Header title={'Categorias'} navigation={navigation} name={route.name}/>
     <FlatList
     data={dataCategories}
-    keyExtractor={category => category}
+    keyExtractor={category => category.title}
     renderItem={({ item }) => (
     <CategoryItem
      category={item}

@@ -13,12 +13,6 @@ function StackNavigator() {
             <Stack.Navigator initialRouteName='Home' 
             screenOptions={() => ({
                 headerShown: false,
-                // header: () => (
-                //     <View style={{flexDirection: 'row', marginTop: 50}}>
-                //         <Button onPress={() => navigation.goBack} title='Back' />
-                //         <Header title={route.name} />
-                //     </View>
-                // )
             })}
                 >
                 <Stack.Screen name='Home' component={Home} />

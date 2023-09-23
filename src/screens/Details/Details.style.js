@@ -17,10 +17,15 @@ export default styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: 'bold',
+    marginHorizontal:5,
+  },
+  description: {
+    marginHorizontal:5,
   },
   price: {
     fontSize: 20,
     fontWeight: 'bold',
     marginVertical: 15,
+    marginHorizontal:5,
   },
 })

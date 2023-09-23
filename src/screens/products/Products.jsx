@@ -5,15 +5,16 @@ import { Header, SearchInput } from "../../components";
 import styles from "./products.style";
 import allProducts from "../../data/products";
 import ProductItem from "./ProductItem/ProductItem";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Products = ({ navigation, route }) => {
   const [arrProducts, setArrProducts] = useState([]);
   const [keyword, setKeyword] = useState("");
-  const {title} = route.params
+  const { title } = route.params;
 
   useEffect(() => {
     if (title) {
-      const products = allProducts.filter(   
+      const products = allProducts.filter(
         (product) => product.category === title
       );
       const productsFiltered = products.filter((product) =>
@@ -28,10 +29,10 @@ const Products = ({ navigation, route }) => {
     }
   }, [title, keyword]);
 
-
   return (
-    <View style={styles.container}>
-      <Header title={title} navigation={navigation}/>
+    <SafeAreaView style={styles.container}>
+    {/* <View style={styles.container}> */}
+      <Header title={title} navigation={navigation} />
       <SearchInput onSearch={setKeyword} />
       <View style={styles.listContainer}>
         {/* <FlatList
@@ -44,17 +45,15 @@ const Products = ({ navigation, route }) => {
           keyExtractor={(item) => item.id}
         /> */}
         <FlatList
-    data={arrProducts}
-    renderItem={({ item }) => (
-      <ProductItem
-      product={item}
-      navigation={navigation}
-      />
-      )}
-      keyExtractor={(item) => item.id}
-    />
+          data={arrProducts}
+          renderItem={({ item }) => (
+            <ProductItem product={item} navigation={navigation} />
+          )}
+          keyExtractor={(item) => item.id}
+        />
       </View>
-    </View>
+    {/* </View> */}
+    </SafeAreaView>
   );
 };
 

@@ -8,7 +8,7 @@ const ProductItem = ({ product, navigation}) => {
 
   return (
 <Pressable 
-onPress={() => navigation.navigate('Details', {product})}
+onPress={() => navigation.navigate('Details', {product: product})}
 >
 
     <Card style={styles.cardContainer}>

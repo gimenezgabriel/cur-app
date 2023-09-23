@@ -9,7 +9,6 @@ export default styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        // paddingVertical: 'auto',
     },
     headerContainer: {
         flexDirection: 'row', 

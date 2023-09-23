@@ -6,11 +6,11 @@ import styles from './CategoryItem.style'
 
 const CategoryItem = ({ category, navigation}) => {
 
-const {title, src} = category
+const {title} = category
 
   return (
 <Pressable 
-onPress={() => navigation.navigate('Products', {title})}
+onPress={() => navigation.navigate('Products', {title: title})}
 >
 
     <Card style={styles.cardContainer}>
