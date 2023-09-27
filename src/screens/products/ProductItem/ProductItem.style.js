@@ -12,13 +12,15 @@ export default styles = StyleSheet.create({
   },
   text: {
     fontFamily: 'OpenSansBold',
-    color: colors.quaternary
+    color: colors.quaternary,
+    fontSize: 15,
+    
   },
   iconContainer: {
     marginRight: 10,
   },
   icon: {
-    width:48, 
-    height: 48, 
+    width:56, 
+    height: 56, 
   },
 });

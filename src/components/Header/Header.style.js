@@ -16,7 +16,7 @@ export default styles = StyleSheet.create({
         justifyContent: 'center',
     },
     text: {
-        fontSize: 25,
+        fontSize: 30,
         fontFamily: 'OpenSansBold',
         color: '#ffffff',
     },
@@ -29,5 +29,6 @@ export default styles = StyleSheet.create({
     bakButtonText: {
         fontFamily: 'OpenSansBold',
         color: '#ffffff',
+        fontSize: 16
     }
 })

@@ -7,7 +7,7 @@ export default styles = StyleSheet.create({
     backgroundColor: colors.white,
   },
   imageContainer: {
-    height: '50%',
+    height: '60%',
     width: '100%',
   },
   image: {

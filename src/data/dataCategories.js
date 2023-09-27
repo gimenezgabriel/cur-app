@@ -15,16 +15,16 @@ export default [
         src: Andrologia
     },
     {
-        title: "Cardiologia",
-        src: Cardiologia
-    },
-    {
         title: "Nefrologia",
         src: Nefrologia
     },
     {
         title: "Ginecologia",
         src: Ginecologia
+    },
+    {
+        title: "Cardiologia",
+        src: Cardiologia
     },
     {
         title: "Cirugia General",

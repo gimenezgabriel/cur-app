@@ -1,4 +1,4 @@
-import { Text, View, TouchableOpacity } from 'react-native'
+import { Text, View, TouchableOpacity, Image } from 'react-native'
 
 import React from 'react'
 import styles from './Header.style'
@@ -14,6 +14,10 @@ const Header = ({ name, title, navigation }) => {
 }
       <View style={styles.headerContainer}>
       <Text style={styles.text}>{title}</Text>
+      {/* <Image
+          source={require('../../../assets/images/logocur.png')} // Reemplaza con la ruta de tu imagen PNG
+          style={styles.logo} // Define un estilo para tu logo si es necesario
+        /> */}
       </View>
     </View>
   )

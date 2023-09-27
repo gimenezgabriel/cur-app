@@ -11,7 +11,8 @@ export default styles = StyleSheet.create({
   },
   text: {
     fontFamily: 'OpenSansBold',
-    color: colors.quaternary
+    color: colors.quaternary,
+    fontSize: 16
   },
   iconContainer: {
     marginRight: 10,
