@@ -1,9 +1,10 @@
 
 import {useFonts} from 'expo-font'
 import fonts from './src/global/fonts'
-import StackNavigator from './src/navigation/StackNavigator'
 import BottomTabNavigator from './src/navigation/BottomTabNavigator';
 import { NavigationContainer } from "@react-navigation/native";
+import { Provider } from 'react-redux';
+import store from './src/store'
 
 export default function App() {
   const [fontsLoaded] = useFonts(fonts)
@@ -12,11 +13,14 @@ export default function App() {
     return null
   }
 
-  return (<NavigationContainer>
+  return (
+  <Provider store={store}>
+  <NavigationContainer>
     <BottomTabNavigator />
     </NavigationContainer>
+    </Provider>
     )
 }
 
 
-// 01:05:05 
+// 00:38:49

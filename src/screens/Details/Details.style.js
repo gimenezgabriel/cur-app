@@ -5,14 +5,18 @@ export default styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
+    marginBottom: 60,
+    alignItems: 'center', 
+    justifyContent: 'center',
   },
   imageContainer: {
-    height: '60%',
-    width: '100%',
+    height: '40%',
+    width: '50%',
   },
   image: {
     height: '100%',
     width: '100%',
+    marginHorizontal: 'auto'
   },
   title: {
     fontSize: 30,
@@ -26,7 +30,6 @@ export default styles = StyleSheet.create({
   },
   price: {
     fontSize: 20,
-    // fontWeight: 'bold',
     marginVertical: 15,
     marginHorizontal:5,
     fontFamily: 'OpenSansCondensedBold'
