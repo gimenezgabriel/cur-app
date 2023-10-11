@@ -15,7 +15,7 @@ onPress={() => navigation.navigate('Details', {product: product})}
     <View style={styles.iconContainer}>
           <Image
             style={styles.icon}
-            source={product.images[0]}
+            src={product.images}
           />
         </View>
         <Text style={styles.text}>{product.title}</Text>

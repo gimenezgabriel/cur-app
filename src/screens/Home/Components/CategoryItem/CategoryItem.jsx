@@ -22,7 +22,7 @@ onPress={() => {
     <View style={styles.iconContainer}>
           <Image
             style={styles.icon}
-            source={category.src}
+            src={category.src}
           />
         </View>
         <Text style={styles.text}>{category.title}</Text>
