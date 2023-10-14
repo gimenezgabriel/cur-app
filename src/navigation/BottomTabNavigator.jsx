@@ -3,6 +3,7 @@ import { colors } from "../constants/Colors";
 import CartNavigator from './CartNavigator';
 import OrdersNavigator from "./OrdersNavigator";
 import StackNavigator from './StackNavigator';
+import ProfileNavigator from "./profileNavigator";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs" ;
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
@@ -49,6 +50,18 @@ function BottomTabNavigator() {
                         options={{
             tabBarIcon: ({focused}) =>(
                 <FontAwesome5 name="list-ul"
+                 size={28} 
+                 color={focused ? colors.secondary : colors.primary} 
+                 />
+                    ),
+                }}
+                />
+                <BottomTab.Screen 
+                        name='ProfileNav' 
+                        component={ProfileNavigator} 
+                        options={{
+            tabBarIcon: ({focused}) =>(
+                <FontAwesome5 name="user"
                  size={28} 
                  color={focused ? colors.secondary : colors.primary} 
                  />

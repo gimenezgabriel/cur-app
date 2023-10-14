@@ -15,11 +15,13 @@ export default styles = StyleSheet.create({
     },
     inputEmail:{
         width: '95%',
-        backgroundColor: colors.secondary,
-        height: 30,
-        marginVertical: 15,
+        borderWidth: 2,
+        borderColor: colors.secondary,
+        height: 40,
+        marginVertical: 10,
         justifyContent: 'center',
         alignItems: 'center',
+        borderRadius: 10,
     },
     loginBotton:{
         backgroundColor: colors.primary,
@@ -29,5 +31,15 @@ export default styles = StyleSheet.create({
         marginBottom: 15,
         justifyContent: 'center',
         alignItems: 'center',
-    }
+    },
+    textLogin:{
+        fontFamily: 'OpenSansBold',
+    color: colors.tertiary,
+    fontSize: 18 
+},
+textAcount:{
+    fontFamily: 'OpenSansBold',
+color: colors.quaternary,
+fontSize: 12 
+},
 })
