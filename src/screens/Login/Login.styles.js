@@ -42,4 +42,7 @@ textAcount:{
 color: colors.quaternary,
 fontSize: 12 
 },
+placeholder:{
+    padding: 10,
+},
 })

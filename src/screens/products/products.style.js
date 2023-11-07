@@ -6,6 +6,8 @@ export default styles = StyleSheet.create({
         backgroundColor: '#ffffff'
     },
     listContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
         paddingHorizontal: 15,
         flex: 1,
         marginTop: 15,

@@ -1,11 +1,15 @@
 import { Pressable, TextInput, View } from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import AntDesign from '@expo/vector-icons/AntDesign'
 import styles from './Searchinput.style'
 
 const SearchInput = ({ onSearch }) => {
     const [value, setValue] = useState('')
+
+    useEffect(() => {
+        onSearch(value)
+    }, [value])
 
     const search = () => {
         onSearch(value)
@@ -24,12 +28,12 @@ const SearchInput = ({ onSearch }) => {
         onChangeText={setValue} 
         placeholder='Search Doctor' 
         />
-        <Pressable onPress={search}>
+        {/* <Pressable onPress={search}>
             <AntDesign name='search1' size={25} color={'black'} />
         </Pressable>
         <Pressable onPress={clearInput}>
             <AntDesign name='closecircleo' size={25} color={'black'} />
-        </Pressable>
+        </Pressable> */}
     </View>
   )
 }

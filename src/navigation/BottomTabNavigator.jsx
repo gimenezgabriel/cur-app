@@ -6,6 +6,7 @@ import StackNavigator from './StackNavigator';
 import ProfileNavigator from "./profileNavigator";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs" ;
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 
 const BottomTab = createBottomTabNavigator()
@@ -49,8 +50,8 @@ function BottomTabNavigator() {
                         component={OrdersNavigator} 
                         options={{
             tabBarIcon: ({focused}) =>(
-                <FontAwesome5 name="list-ul"
-                 size={28} 
+                <MaterialIcons name="location-pin"
+                 size={30} 
                  color={focused ? colors.secondary : colors.primary} 
                  />
                     ),
@@ -81,6 +82,6 @@ tabBar: {
     backgroundColor: colors.quaternary,
     borderTopRightRadius: 25,
     borderTopLeftRadius: 25,
-    height: 58,
+    height: 60,
 }
 })

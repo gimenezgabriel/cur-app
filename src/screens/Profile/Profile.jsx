@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setCameraImage } from '../../features/auth/authslice'
 import { usePostProfileImageMutation } from '../../services/shopApi'
 
-const Profile = () => {
+const Profile = ({navigation}) => {
   const image = useSelector(state => state.auth.imageCamera)
   const {localId} =useSelector(state => state.auth)
   const [triggerSaveProfileImage, result] = usePostProfileImageMutation()
@@ -41,7 +41,6 @@ const Profile = () => {
 
     const confirmImage = () => {
       triggerSaveProfileImage({image, localId})
-      console.log(result)
     }
 
   return (
@@ -66,6 +65,10 @@ const Profile = () => {
         </Pressable>
         <Pressable style={styles.cameraButtom} onPress={confirmImage} >
             <Text style={styles.textProfile}>confirmar</Text>
+        </Pressable>
+        <Pressable style={{...styles.cameraButtom, marginTop: 20}} 
+        onPress={() => navigation.navigate("Location")} >
+            <Text style={styles.textProfile}>ir a mi ubicacion</Text>
         </Pressable>
     </View>
   )

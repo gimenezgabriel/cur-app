@@ -4,6 +4,7 @@ import styles from './Login.styles'
 import {useLoginMutation} from '../../services/authApi'
 import { useDispatch } from 'react-redux'
 import { setUser } from '../../features/auth/authslice'
+import { insertSession } from '../../db'
 
 const Login = ({navigation}) => {
   const [email, setEmail] = useState('')
@@ -12,15 +13,22 @@ const Login = ({navigation}) => {
   const dispatch = useDispatch()
 
   const onSubmit = () => {
-    console.log(email, password)
     triggerLogin({
       email,
       password,
     })
-    console.log(result)
-    if(result.isSuccess) {
+    .unwrap()
+    .then(result => {
       dispatch(setUser(result))
-    }
+      insertSession({
+        localId: result.localId,
+        email: result.email,
+        token: result.idToken,
+      
+    })
+      .then(result => console.log(result)) 
+      .catch(error => console.log(error.message))
+    })
   }
 
 
@@ -28,8 +36,8 @@ const Login = ({navigation}) => {
     <View style={styles.container}>
         <View style={styles.loginContainer}>
             <Text style={styles.textLogin}>Login to start</Text>
-            <TextInput style={styles.inputEmail} value={email} onChangeText={setEmail}/>
-            <TextInput style={styles.inputEmail} value={password} onChangeText={setPassword}/>
+            <TextInput style={[styles.inputEmail, , styles.placeholder]} value={email} onChangeText={setEmail} placeholder='Email' placeholderStyle={styles.placeholder}/>
+            <TextInput style={[styles.inputEmail, styles.placeholder]} value={password} onChangeText={setPassword} placeholder='Contraseña' placeholderStyle={styles.placeholder}/>
             <Pressable style={styles.loginBotton} onPress={onSubmit}>
                 <Text style={{color: 'white'}}>Login</Text>
             </Pressable>

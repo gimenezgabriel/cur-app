@@ -13,14 +13,17 @@ const Products = ({ navigation}) => {
   const [keyword, setKeyword] = useState("");
   const {data, isLoading} = useGetProductsByCategoryQuery(category.title)
   const [products, setProducts] = useState([])
+  
   useEffect(() => {
-    if (data) {
-      const productsFiltered = Object.values(data).filter(product =>
+    if (!isLoading) {
+      const dataArr = Object.values(data)
+      setProducts(dataArr)
+      const productsFiltered = dataArr.filter(product =>
         product.title.includes(keyword)
-      );
+      )
       setProducts(productsFiltered);
     } 
-  }, [data, keyword]);
+  }, [isLoading, keyword]);
 
   return (
     <SafeAreaView style={styles.container}>

@@ -42,4 +42,7 @@ export default styles = StyleSheet.create({
     color: colors.quaternary,
     fontSize: 12 
     },
+    placeholder:{
+        padding:10,
+    },
 })

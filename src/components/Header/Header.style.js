@@ -19,10 +19,11 @@ export default styles = StyleSheet.create({
         fontSize: 30,
         fontFamily: 'OpenSansBold',
         color: '#ffffff',
+        marginHorizontal: 58,
     },
     backButton: {
         position: 'absolute',
-        top: 30,
+        // top: 30,
         left: 5,
 
     },

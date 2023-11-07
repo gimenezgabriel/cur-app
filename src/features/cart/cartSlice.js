@@ -12,42 +12,54 @@ export const cartSlice = createSlice ({
     initialState,
     reducers: {
         addItem: (state, action) => {
-            const productRepeated =state.items.find(
+            const products = state.items
+            const productRepeated = products.find(
                 item => item.id === action.payload.id
             )
-                if (productRepeated){
-                    const itemsUpdated = state.items.map(item => {
-                        if(item.id === action.payload.id) {
-                            item.quantity += action.payload.quantity
-                            return item
-                        }
-                        return
-                    })
-                    const total = itemsUpdated.reduce(
-                        (acc, current) => (acc += current.price * current.quantity)
-                    )
-                    state = {
-                        ...state,
-                        items: itemsUpdated,
-                        total,
-                        updatedAt: new Date().toLocaleString()
-                    }
-                } else {
-                    state.items.push(action.payload)
-                    const total = state.items.reduce(
-                        (acc, current) => (acc += current.price * current.quantity)
-                    )
-                    state = {
-                        ...state,
-                        total,
-                        updatedAt: new Date().toLocaleString(),
-                    }
-                }
+
+            if (!productRepeated)
+            return {
+              ...state,
+              items: [...state.items, action.payload],
+              total: state.total + action.payload.price,
+              updatedAt: new Date().toLocaleString(),
+            }
+    
+          const itemsUpdated = products.map(item => {
+            if (item.id === action.payload.id) {
+              return Object.assign({}, item, {
+                quantity: item.quantity + action.payload.quantity,
+              })
+            }
+            return item
+          })
+          return {
+            ...state,
+            items: itemsUpdated,
+            total: state.total + action.payload.price,
+            updatedAt: new Date().toLocaleString(),
+          }
         },
-        removeItem: (state, action) => {}
+        removeItem: (state, action) => {
+      const productToRemove = state.items.find(item => item.id === action.payload.id);
+      
+      if (productToRemove) {
+        const updatedItems = state.items.filter(item => item.id !== action.payload.id);
+        const updatedTotal = state.total - (productToRemove.price * productToRemove.quantity);
+
+        return {
+          ...state,
+          items: updatedItems,
+          total: updatedTotal,
+          updatedAt: new Date().toLocaleString(),
+        };
+      }
+
+      return state;
     },
+  },
 })
-
-export const { addItem, removeItem } = cartSlice.actions
-
-export default cartSlice.reducer
+    
+    export const { addItem, removeItem } = cartSlice.actions
+    
+    export default cartSlice.reducer

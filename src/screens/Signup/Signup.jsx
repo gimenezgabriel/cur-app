@@ -13,15 +13,15 @@ const Signup = ({navigation}) => {
   const dispatch = useDispatch()
 
   const onSubmit = () => {
-    console.log(email, password, confirmPass)
     triggerSignUp({
       email,
       password,
     })
-    console.log('resultado', result)
-    if(result.isSuccess) {
+    .unwrap()
+    .then(result => {
       dispatch(setUser (result))
-    }
+    })
+    .catch(err => console.log(err))
   }
 
 
@@ -29,13 +29,16 @@ const Signup = ({navigation}) => {
     <View style={styles.container}>
         <View style={styles.loginContainer}>
             <Text style={styles.textSign}>Signup to start</Text>
-            <TextInput style={styles.inputEmail} value={email} onChangeText={setEmail} />
-            <TextInput style={styles.inputEmail} value={password} onChangeText={setPassword} />
-            <TextInput style={styles.inputEmail} value={confirmPass} onChangeText={setConfirmPass} />
+            <TextInput style={[styles.inputEmail, styles.placeholder]} placeholder='Nombre y Apellido' />
+            <TextInput style={[styles.inputEmail, styles.placeholder]} placeholder='DNI' />
+            <TextInput style={[styles.inputEmail, styles.placeholder]} placeholder='Telefono' />
+            <TextInput style={[styles.inputEmail, styles.placeholder]} value={email} onChangeText={setEmail} placeholder='Email' />
+            <TextInput style={[styles.inputEmail, styles.placeholder]} value={password} onChangeText={setPassword} placeholder='Contraseña' />
+            <TextInput style={[styles.inputEmail, styles.placeholder]} value={confirmPass} onChangeText={setConfirmPass} placeholder='Confirmar Contraseña' />
             <Pressable style={styles.loginBotton} onPress={onSubmit}>
                 <Text style={{color: 'white'}}>Sign up</Text>
             </Pressable>
-            <Text style={styles.textAcount}>Already have an acount?</Text>
+            <Text style={styles.textAcount}>Ya tienes cuenta?</Text>
             <Pressable style={styles.loginBotton} 
             onPress={() => navigation.navigate("Login")}>
                 <Text style={{color: 'white'}}>Login</Text>
