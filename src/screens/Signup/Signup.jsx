@@ -1,4 +1,4 @@
-import { View, Text, Pressable, TextInput } from 'react-native'
+import { View, Text, Pressable, TextInput, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import styles from './signup.styles'
 import {useSignUpMutation} from '../../services/authApi'
@@ -6,6 +6,9 @@ import { useDispatch } from 'react-redux'
 import { setUser } from '../../features/auth/authslice'
 
 const Signup = ({navigation}) => {
+  const [name, setName] = useState('')
+  const [dni, setDni] = useState('')
+  const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPass, setConfirmPass] = useState('')
@@ -14,6 +17,9 @@ const Signup = ({navigation}) => {
 
   const onSubmit = () => {
     triggerSignUp({
+      name,
+      dni, 
+      phone,
       email,
       password,
     })
@@ -26,12 +32,13 @@ const Signup = ({navigation}) => {
 
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
+    {/* <View style={styles.container}> */}
         <View style={styles.loginContainer}>
             <Text style={styles.textSign}>Signup to start</Text>
-            <TextInput style={[styles.inputEmail, styles.placeholder]} placeholder='Nombre y Apellido' />
-            <TextInput style={[styles.inputEmail, styles.placeholder]} placeholder='DNI' />
-            <TextInput style={[styles.inputEmail, styles.placeholder]} placeholder='Telefono' />
+            <TextInput style={[styles.inputEmail, styles.placeholder]} value={name} onChangeText={setName} placeholder='Nombre y Apellido' />
+            <TextInput style={[styles.inputEmail, styles.placeholder]} value={dni} onChangeText={setDni} placeholder='DNI' />
+            <TextInput style={[styles.inputEmail, styles.placeholder]} value={phone} onChangeText={setPhone} placeholder='Telefono' />
             <TextInput style={[styles.inputEmail, styles.placeholder]} value={email} onChangeText={setEmail} placeholder='Email' />
             <TextInput style={[styles.inputEmail, styles.placeholder]} value={password} onChangeText={setPassword} placeholder='Contraseña' />
             <TextInput style={[styles.inputEmail, styles.placeholder]} value={confirmPass} onChangeText={setConfirmPass} placeholder='Confirmar Contraseña' />
@@ -44,7 +51,8 @@ const Signup = ({navigation}) => {
                 <Text style={{color: 'white'}}>Login</Text>
             </Pressable>
         </View>
-    </View>
+    {/* </View> */}
+    </ScrollView>
   )
 }
 

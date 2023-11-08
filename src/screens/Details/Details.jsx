@@ -18,6 +18,7 @@ const Details = ({ route, navigation }) => {
   
   return (
     <SafeAreaView style={styles.container}>
+    <View style={styles.containerCard}>
       <Header title={"Detalle"} navigation={navigation} />
       <View style={styles.imageContainer}>
         <Image style={styles.image} src={product.images} />
@@ -25,10 +26,11 @@ const Details = ({ route, navigation }) => {
       <Text style={styles.title}>{product.title}</Text>
       <Text style={styles.description}>{product.description}</Text>
       <Text style={styles.price}>Matricula: {product.cardnumber}</Text>
-      <Text style={{fontSize: 50}}>{counter}</Text>
+      {/* <Text style={{fontSize: 50}}>{counter}</Text>
       <Pressable onPress={handleAddToCart}>
         <Text>Add to cart</Text>
-      </Pressable>
+      </Pressable> */}
+    </View>
     </SafeAreaView>
   );
 };

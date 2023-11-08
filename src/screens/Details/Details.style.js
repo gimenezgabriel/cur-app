@@ -5,7 +5,14 @@ export default styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
-    marginBottom: 60,
+    // marginBottom: 60,
+    // alignItems: 'center', 
+    // justifyContent: 'center',
+  },
+  containerCard: {
+    // flex: 1,
+    // backgroundColor: colors.white,
+    // marginBottom: 60,
     alignItems: 'center', 
     justifyContent: 'center',
   },

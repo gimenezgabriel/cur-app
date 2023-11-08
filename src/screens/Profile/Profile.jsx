@@ -5,10 +5,12 @@ import styles from './Profile.styles'
 import { useDispatch, useSelector } from 'react-redux'
 import { setCameraImage } from '../../features/auth/authslice'
 import { usePostProfileImageMutation } from '../../services/shopApi'
+import { Header } from '../../components'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const Profile = ({navigation}) => {
   const image = useSelector(state => state.auth.imageCamera)
-  const {localId} =useSelector(state => state.auth)
+  const {localId, name, user, phone, dni} =useSelector(state => state.auth)
   const [triggerSaveProfileImage, result] = usePostProfileImageMutation()
   const dispatch = useDispatch()
 
@@ -44,7 +46,8 @@ const Profile = ({navigation}) => {
     }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      <Header title="Perfil" navigation={navigation} />
         {image ? (
           <Image source={{
             uri: image,
@@ -66,11 +69,7 @@ const Profile = ({navigation}) => {
         <Pressable style={styles.cameraButtom} onPress={confirmImage} >
             <Text style={styles.textProfile}>confirmar</Text>
         </Pressable>
-        <Pressable style={{...styles.cameraButtom, marginTop: 20}} 
-        onPress={() => navigation.navigate("Location")} >
-            <Text style={styles.textProfile}>ir a mi ubicacion</Text>
-        </Pressable>
-    </View>
+    </SafeAreaView>
   )
 }
 

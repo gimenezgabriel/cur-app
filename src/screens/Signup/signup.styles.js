@@ -4,8 +4,9 @@ import {colors} from '../../constants/Colors'
 export default styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        marginTop: 10
     },
     loginContainer: {
         width: '100%',
